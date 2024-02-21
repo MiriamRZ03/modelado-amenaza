@@ -639,13 +639,49 @@
             ],
             "vertices": [
               {
-                "x": 810,
-                "y": -170
+                "x": 710,
+                "y": -160
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Usuario/Web \nserver límite",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "8cef23eb-8eb6-4b4e-9f60-6b1ae97d205b",
+            "source": {
+              "x": 110,
+              "y": -320
+            },
+            "target": {
+              "x": 850,
+              "y": -360
+            },
+            "vertices": [
+              {
+                "x": 230,
+                "y": -280
               },
               {
-                "x": 710,
-                "y": -110
+                "x": 490,
+                "y": -300
+              },
+              {
+                "x": 760,
+                "y": -320
               }
+            ],
+            "labels": [
+              "Usuario/Web \nserver límite"
             ]
           }
         ],
