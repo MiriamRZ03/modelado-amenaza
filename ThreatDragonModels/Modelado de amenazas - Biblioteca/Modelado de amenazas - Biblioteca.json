@@ -424,8 +424,8 @@
             },
             "vertices": [
               {
-                "x": 690,
-                "y": -170
+                "x": 750,
+                "y": -196
               }
             ],
             "labels": [
@@ -610,6 +610,42 @@
             ],
             "labels": [
               "Web Response"
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Límite Web \nserver/Db",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "463acc87-019e-434e-9878-c00b146fd965",
+            "source": {
+              "x": 810,
+              "y": -240
+            },
+            "target": {
+              "x": 710,
+              "y": -10
+            },
+            "labels": [
+              "Límite Web \nserver/Db"
+            ],
+            "vertices": [
+              {
+                "x": 810,
+                "y": -170
+              },
+              {
+                "x": 710,
+                "y": -110
+              }
             ]
           }
         ],
