@@ -916,8 +916,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "4c8c2beb-4960-43ae-b3d4-14d78c4946a1",
             "zIndex": 1,
+            "id": "4c8c2beb-4960-43ae-b3d4-14d78c4946a1",
             "data": {
               "type": "tm.Process",
               "name": "Controlador \nWeb",
@@ -953,8 +953,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "59872e56-ed3d-40ff-b012-35938c06cb8f",
             "zIndex": 2,
+            "id": "59872e56-ed3d-40ff-b012-35938c06cb8f",
             "data": {
               "type": "tm.Process",
               "name": "Proceso \nde Login",
@@ -993,8 +993,8 @@
             },
             "visible": true,
             "shape": "store",
-            "id": "a87cf3c7-5ff2-4af1-9548-e5723508505b",
             "zIndex": 3,
+            "id": "a87cf3c7-5ff2-4af1-9548-e5723508505b",
             "data": {
               "type": "tm.Store",
               "name": "Base de datos",
@@ -1034,8 +1034,8 @@
             },
             "visible": true,
             "shape": "store",
-            "id": "bb067726-7b96-4e31-84e6-7be453d8ced0",
             "zIndex": 4,
+            "id": "bb067726-7b96-4e31-84e6-7be453d8ced0",
             "data": {
               "type": "tm.Store",
               "name": "Páginas web \nen disco",
@@ -1065,24 +1065,38 @@
                 "text": "Usuario"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "actor",
-            "id": "3c8c160b-966b-4fae-be58-984654d414a4",
             "zIndex": 5,
+            "id": "3c8c160b-966b-4fae-be58-984654d414a4",
             "data": {
               "type": "tm.Actor",
               "name": "Usuario",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "1b918ce3-9082-41c8-b89e-47870570b139",
+                  "title": "Suplantación de identidad",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Spoofing",
+                  "description": "(1) Usuario web anónimo.\n(2) Usuario con credenciales de inicio de sesión válidas.\n(3) Usuario con credenciales de inicio de sesión no válidas.\n\nAcción de amenaza destinada a acceder y utilizar las credenciales de otro usuario, como el nombre de usuario y la contraseña.",
+                  "mitigation": "1. Autenticación adecuada\n2. Proteger datos secretos \n3. No almacenar secretos",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": "5"
+                }
+              ]
             }
           },
           {
@@ -1117,15 +1131,15 @@
               "threats": []
             },
             "id": "90b56430-9a26-4655-8305-3d1e77643a37",
+            "labels": [
+              "Vistas"
+            ],
             "source": {
               "cell": "bb067726-7b96-4e31-84e6-7be453d8ced0"
             },
             "target": {
               "cell": "4c8c2beb-4960-43ae-b3d4-14d78c4946a1"
-            },
-            "labels": [
-              "Vistas"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -1159,6 +1173,9 @@
               "threats": []
             },
             "id": "b792444a-e6f2-4e32-99a6-e1d9b872d1e9",
+            "labels": [
+              "Usuario Autenticado\nSQL Query Resultado\n"
+            ],
             "source": {
               "cell": "a87cf3c7-5ff2-4af1-9548-e5723508505b"
             },
@@ -1170,9 +1187,6 @@
                 "x": 960,
                 "y": 280
               }
-            ],
-            "labels": [
-              "Usuario Autenticado\nSQL Query Resultado\n"
             ]
           },
           {
@@ -1207,6 +1221,9 @@
               "threats": []
             },
             "id": "35f05efa-09b0-4ffd-a021-9c5126389ea4",
+            "labels": [
+              "Usuario Autenticado\nSQL Query "
+            ],
             "source": {
               "cell": "59872e56-ed3d-40ff-b012-35938c06cb8f"
             },
@@ -1218,9 +1235,6 @@
                 "x": 750,
                 "y": 330
               }
-            ],
-            "labels": [
-              "Usuario Autenticado\nSQL Query "
             ]
           },
           {
@@ -1255,15 +1269,15 @@
               "threats": []
             },
             "id": "78c6e556-2e2b-4356-b158-ee882e120256",
+            "labels": [
+              "UsuarioAutenticado()"
+            ],
             "source": {
               "cell": "4c8c2beb-4960-43ae-b3d4-14d78c4946a1"
             },
             "target": {
               "cell": "59872e56-ed3d-40ff-b012-35938c06cb8f"
             },
-            "labels": [
-              "UsuarioAutenticado()"
-            ],
             "vertices": [
               {
                 "x": 600,
@@ -1303,6 +1317,9 @@
               "threats": []
             },
             "id": "ec9f8980-caec-46ee-aa96-51fb0a5fcd88",
+            "labels": [
+              "Usuario Autenticado \nResultado"
+            ],
             "source": {
               "cell": "59872e56-ed3d-40ff-b012-35938c06cb8f"
             },
@@ -1314,9 +1331,6 @@
                 "x": 610,
                 "y": 170
               }
-            ],
-            "labels": [
-              "Usuario Autenticado \nResultado"
             ]
           },
           {
@@ -1351,6 +1365,9 @@
               "threats": []
             },
             "id": "f054c495-29e0-4b80-80b6-03772bfa7653",
+            "labels": [
+              "Web Request"
+            ],
             "source": {
               "cell": "3c8c160b-966b-4fae-be58-984654d414a4"
             },
@@ -1366,16 +1383,78 @@
                 "x": 320,
                 "y": 260
               }
-            ],
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Usuario/Web\nServer límite",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "68fe041b-f9c8-4e8d-9e75-97f0abd2649b",
             "labels": [
-              "Web Request"
+              "Usuario/Web\nServer límite"
+            ],
+            "source": {
+              "x": 210,
+              "y": 110
+            },
+            "target": {
+              "x": 220,
+              "y": 300
+            },
+            "vertices": [
+              {
+                "x": 240,
+                "y": 190
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Límite Web \nServer/Db",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "bcb9bbb4-4868-4931-88eb-6e0d0b4b6948",
+            "labels": [
+              "Límite Web \nServer/Db"
+            ],
+            "source": {
+              "x": 840,
+              "y": 420
+            },
+            "target": {
+              "x": 1010,
+              "y": 390
+            },
+            "vertices": [
+              {
+                "x": 940,
+                "y": 370
+              }
             ]
           },
           {
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1395,14 +1474,31 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "5858a593-707d-485d-9cba-75f8091d6990",
+                  "title": "El flujo de datos debe utilizar HTTP/S",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Respuestas recibidas por la aplicación hacia los usuarios.\nEstas solicitudes se transmiten a través de la Internet pública y podrían ser interceptadas por un atacante.",
+                  "mitigation": "Las solicitudes deberían requerir HTTPS/S. Esto proporcionara confidencialidad e integridad. \nHTTP no debe ser compatible.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": "11"
+                }
+              ]
             },
             "id": "a89b6305-5a85-4e10-bcae-4771a4982ea4",
+            "labels": [
+              "Web Response"
+            ],
             "source": {
               "cell": "4c8c2beb-4960-43ae-b3d4-14d78c4946a1"
             },
@@ -1418,73 +1514,6 @@
                 "x": 280,
                 "y": 130
               }
-            ],
-            "labels": [
-              "Web Response"
-            ]
-          },
-          {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Usuario/Web\nServer límite",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "id": "68fe041b-f9c8-4e8d-9e75-97f0abd2649b",
-            "source": {
-              "x": 210,
-              "y": 110
-            },
-            "target": {
-              "x": 220,
-              "y": 300
-            },
-            "vertices": [
-              {
-                "x": 240,
-                "y": 190
-              }
-            ],
-            "labels": [
-              "Usuario/Web\nServer límite"
-            ]
-          },
-          {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Límite Web \nServer/Db",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "id": "bcb9bbb4-4868-4931-88eb-6e0d0b4b6948",
-            "source": {
-              "x": 840,
-              "y": 420
-            },
-            "target": {
-              "x": 1010,
-              "y": 390
-            },
-            "vertices": [
-              {
-                "x": 940,
-                "y": 370
-              }
-            ],
-            "labels": [
-              "Límite Web \nServer/Db"
             ]
           }
         ],
@@ -1493,6 +1522,6 @@
     ],
     "diagramTop": 3,
     "reviewer": "Guillermo Vera",
-    "threatTop": 13
+    "threatTop": 15
   }
 }
