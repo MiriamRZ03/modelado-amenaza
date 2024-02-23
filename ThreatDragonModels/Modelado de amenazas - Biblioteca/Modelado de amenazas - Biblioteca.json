@@ -168,11 +168,13 @@
                 "text": "Web application \nConfig"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -186,13 +188,27 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "45af9adf-b733-43ce-9d5e-eada5e8f47bc",
+                  "title": "Ataque de fuerza bruta",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "La configuración de la aplicación web almacena las credenciales utilizadas por la aplicación web para acceder a la cola de mensajes. Un atacante podría robarlos y utilizarlos para leer datos confidenciales o colocar mensajes dudosos en la cola.",
+                  "mitigation": "Las credenciales de almacenadas deben estar cifradas.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": "11"
+                }
+              ]
             }
           },
           {
@@ -346,248 +362,6 @@
                 "sourceMarker": {
                   "name": ""
                 },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Web Response",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "cf29870d-83b6-45ca-a4f6-c48cba39ea67",
-                  "title": "El flujo de datos debe utilizar HTTP/S",
-                  "status": "NotApplicable",
-                  "severity": "High",
-                  "type": "Information disclosure",
-                  "description": "Estas solicitudes se transmiten a través de la Internet pública y podrían ser interceptadas por un atacante.",
-                  "mitigation": "Las solicitudes deberían requerir HTTPS/S. Esto proporcionara confidencialidad e integridad. \nHTTP no debe ser compatible.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 3,
-                  "score": "11"
-                }
-              ]
-            },
-            "id": "0c5283a2-c7f8-4f69-a837-b002ef40cfee",
-            "labels": [
-              "Web Response"
-            ],
-            "source": {
-              "cell": "8b925198-156d-402b-aef1-4fb1ed0fb245"
-            },
-            "target": {
-              "cell": "123212c6-bbe1-4fff-9098-cc90314cdfb8"
-            },
-            "vertices": [
-              {
-                "x": 350,
-                "y": -341
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Web Response",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "012419ad-ad2d-412c-bcd8-891eba11e256",
-                  "title": "El flujo de datos debe utilizar HTTP/S",
-                  "status": "NotApplicable",
-                  "severity": "High",
-                  "type": "Information disclosure",
-                  "description": "Estas solicitudes se transmiten a través de la Internet pública y podrían ser interceptadas por un atacante.",
-                  "mitigation": "Las solicitudes deberían requerir HTTPS/S. Esto proporcionara confidencialidad e integridad. \nHTTP no debe ser compatible.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 4,
-                  "score": "11"
-                }
-              ]
-            },
-            "id": "98204d43-cfa4-4288-9ea5-b443a6e881c2",
-            "labels": [
-              "Web Response"
-            ],
-            "source": {
-              "cell": "8b925198-156d-402b-aef1-4fb1ed0fb245"
-            },
-            "target": {
-              "cell": "25be0801-aa76-4e1c-bf63-c60e5430db0f"
-            },
-            "vertices": [
-              {
-                "x": 620,
-                "y": -379
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Web \nRequest",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "9dbe1dd6-4140-487d-9e69-67d4023d9a29",
-                  "title": "El flujo de datos debe utilizar HTTP/S",
-                  "status": "NotApplicable",
-                  "severity": "High",
-                  "type": "Information disclosure",
-                  "description": "Estas solicitudes se transmiten a través de la Internet pública y podrían ser interceptadas por un atacante.",
-                  "mitigation": "Las solicitudes deberían requerir HTTPS/S. Esto proporcionara confidencialidad e integridad. HTTP no debe ser compatible.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 5,
-                  "score": "11"
-                }
-              ]
-            },
-            "id": "b90d18e5-853e-4687-9afe-8b044b46eaa2",
-            "labels": [
-              "Web \nRequest"
-            ],
-            "source": {
-              "cell": "25be0801-aa76-4e1c-bf63-c60e5430db0f"
-            },
-            "target": {
-              "cell": "8b925198-156d-402b-aef1-4fb1ed0fb245"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Resultados web \napp Query ",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "ba394c94-8ddd-402a-b9e7-1e335405cd80",
-                  "title": "Ataque Man in the middle",
-                  "status": "Mitigated",
-                  "severity": "High",
-                  "type": "Information disclosure",
-                  "description": "Un atacante podría interceptar las consultas de la base de datos en tránsito y obtener información confidencial, como credenciales de la base de datos, parámetros de consulta o resultados de la consulta (es poco probable ya que el flujo de datos se realiza a través de una red privada).",
-                  "mitigation": "Aplicar una conexión cifrada en el servidor de base de datos.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 6,
-                  "score": "11"
-                }
-              ]
-            },
-            "id": "9682ba69-0add-4f83-a4e7-15274cf32745",
-            "labels": [
-              "Resultados web \napp Query "
-            ],
-            "source": {
-              "cell": "70f5a877-30de-4272-b87e-318b515bdd5e"
-            },
-            "target": {
-              "cell": "8b925198-156d-402b-aef1-4fb1ed0fb245"
-            },
-            "vertices": [
-              {
-                "x": 750,
-                "y": -196
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
                 "strokeDasharray": "4 3"
               }
             },
@@ -671,6 +445,315 @@
             "shape": "flow",
             "attrs": {
               "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web Response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "cf29870d-83b6-45ca-a4f6-c48cba39ea67",
+                  "title": "El flujo de datos debe utilizar HTTP/S",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Estas solicitudes se transmiten a través de la Internet pública y podrían ser interceptadas por un atacante.",
+                  "mitigation": "Las solicitudes deberían requerir HTTPS/S. Esto proporcionara confidencialidad e integridad. \nHTTP no debe ser compatible.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": "11"
+                }
+              ]
+            },
+            "id": "0c5283a2-c7f8-4f69-a837-b002ef40cfee",
+            "labels": [
+              "Web Response"
+            ],
+            "source": {
+              "cell": "8b925198-156d-402b-aef1-4fb1ed0fb245"
+            },
+            "target": {
+              "cell": "123212c6-bbe1-4fff-9098-cc90314cdfb8"
+            },
+            "vertices": [
+              {
+                "x": 350,
+                "y": -341
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web Request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "ee98ee9b-9e3e-4f98-a3e3-a99b6981a340",
+                  "title": "El flujo de datos debe utilizar HTTP/S",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Estas solicitudes se transmiten a través de la Internet pública y podrían ser interceptadas por un atacante.",
+                  "mitigation": "Las solicitudes deberían requerir HTTPS/S. Esto proporcionara confidencialidad e integridad. \nHTTP no debe ser compatible.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "11"
+                }
+              ]
+            },
+            "id": "5f1a71c7-5a76-4827-9bce-8d0952323687",
+            "labels": [
+              "Web Request"
+            ],
+            "source": {
+              "cell": "123212c6-bbe1-4fff-9098-cc90314cdfb8"
+            },
+            "target": {
+              "cell": "8b925198-156d-402b-aef1-4fb1ed0fb245"
+            },
+            "vertices": [
+              {
+                "x": 400,
+                "y": -230
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web Response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "012419ad-ad2d-412c-bcd8-891eba11e256",
+                  "title": "El flujo de datos debe utilizar HTTP/S",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Estas solicitudes se transmiten a través de la Internet pública y podrían ser interceptadas por un atacante.",
+                  "mitigation": "Las solicitudes deberían requerir HTTPS/S. Esto proporcionara confidencialidad e integridad. \nHTTP no debe ser compatible.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": "11"
+                }
+              ]
+            },
+            "id": "98204d43-cfa4-4288-9ea5-b443a6e881c2",
+            "labels": [
+              "Web Response"
+            ],
+            "source": {
+              "cell": "8b925198-156d-402b-aef1-4fb1ed0fb245"
+            },
+            "target": {
+              "x": 670,
+              "y": -380
+            },
+            "vertices": [
+              {
+                "x": 620,
+                "y": -379
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web \nRequest",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "9dbe1dd6-4140-487d-9e69-67d4023d9a29",
+                  "title": "El flujo de datos debe utilizar HTTP/S",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Estas solicitudes se transmiten a través de la Internet pública y podrían ser interceptadas por un atacante.",
+                  "mitigation": "Las solicitudes deberían requerir HTTPS/S. Esto proporcionara confidencialidad e integridad. HTTP no debe ser compatible.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "11"
+                }
+              ]
+            },
+            "id": "b90d18e5-853e-4687-9afe-8b044b46eaa2",
+            "labels": [
+              "Web \nRequest"
+            ],
+            "source": {
+              "cell": "25be0801-aa76-4e1c-bf63-c60e5430db0f"
+            },
+            "target": {
+              "cell": "8b925198-156d-402b-aef1-4fb1ed0fb245"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Resultados web \napp Query ",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "ba394c94-8ddd-402a-b9e7-1e335405cd80",
+                  "title": "Ataque Man in the middle",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Information disclosure",
+                  "description": "Un atacante podría interceptar las consultas de la base de datos en tránsito y obtener información confidencial, como credenciales de la base de datos, parámetros de consulta o resultados de la consulta (es poco probable ya que el flujo de datos se realiza a través de una red privada).",
+                  "mitigation": "Aplicar una conexión cifrada en el servidor de base de datos.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": "11"
+                }
+              ]
+            },
+            "id": "9682ba69-0add-4f83-a4e7-15274cf32745",
+            "labels": [
+              "Resultados web \napp Query "
+            ],
+            "source": {
+              "cell": "70f5a877-30de-4272-b87e-318b515bdd5e"
+            },
+            "target": {
+              "cell": "8b925198-156d-402b-aef1-4fb1ed0fb245"
+            },
+            "vertices": [
+              {
+                "x": 750,
+                "y": -196
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
                 "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
@@ -701,7 +784,7 @@
                   "id": "7dde9b06-ffe8-42fd-b1b8-a21cc0299cc8",
                   "title": "Ataque Man in the middle",
                   "status": "Mitigated",
-                  "severity": "High",
+                  "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "Un atacante podría interceptar las consultas de la base de datos en tránsito y obtener información confidencial, como credenciales de la base de datos, parámetros de consulta o resultados de la consulta (es poco probable ya que el flujo de datos se realiza a través de una red privada).",
                   "mitigation": "Aplicar una conexión cifrada en el servidor de base de datos.",
@@ -727,68 +810,6 @@
               {
                 "x": 630,
                 "y": -110
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Web Request",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "ee98ee9b-9e3e-4f98-a3e3-a99b6981a340",
-                  "title": "El flujo de datos debe utilizar HTTP/S",
-                  "status": "NotApplicable",
-                  "severity": "High",
-                  "type": "Information disclosure",
-                  "description": "Estas solicitudes se transmiten a través de la Internet pública y podrían ser interceptadas por un atacante.",
-                  "mitigation": "Las solicitudes deberían requerir HTTPS/S. Esto proporcionara confidencialidad e integridad. \nHTTP no debe ser compatible.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 1,
-                  "score": "11"
-                }
-              ]
-            },
-            "id": "5f1a71c7-5a76-4827-9bce-8d0952323687",
-            "labels": [
-              "Web Request"
-            ],
-            "source": {
-              "cell": "123212c6-bbe1-4fff-9098-cc90314cdfb8"
-            },
-            "target": {
-              "cell": "8b925198-156d-402b-aef1-4fb1ed0fb245"
-            },
-            "vertices": [
-              {
-                "x": 400,
-                "y": -230
               }
             ]
           }
@@ -1401,6 +1422,6 @@
     ],
     "diagramTop": 3,
     "reviewer": "Guillermo Vera",
-    "threatTop": 7
+    "threatTop": 8
   }
 }
