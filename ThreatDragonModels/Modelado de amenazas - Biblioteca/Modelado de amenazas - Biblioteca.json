@@ -1081,11 +1081,13 @@
                 "text": "Páginas web \nen disco"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1099,7 +1101,7 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
@@ -1109,7 +1111,7 @@
                 {
                   "id": "73ad2b15-a6a7-43f6-9d4b-c1b6334ce23e",
                   "title": "Modificación sin autorización",
-                  "status": "Mitigated",
+                  "status": "Open",
                   "severity": "High",
                   "type": "Tampering",
                   "description": "Páginas físicas almacenadas en el disco.\n\nUn atacante podría modificar las páginas web sin autorización.",
