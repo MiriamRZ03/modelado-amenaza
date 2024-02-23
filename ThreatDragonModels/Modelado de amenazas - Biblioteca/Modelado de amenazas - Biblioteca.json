@@ -1166,102 +1166,6 @@
                 "sourceMarker": {
                   "name": ""
                 },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Usuario Autenticado\nSQL Query Resultado\n",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "b792444a-e6f2-4e32-99a6-e1d9b872d1e9",
-            "labels": [
-              "Usuario Autenticado\nSQL Query Resultado\n"
-            ],
-            "source": {
-              "cell": "a87cf3c7-5ff2-4af1-9548-e5723508505b"
-            },
-            "target": {
-              "cell": "59872e56-ed3d-40ff-b012-35938c06cb8f"
-            },
-            "vertices": [
-              {
-                "x": 960,
-                "y": 280
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Usuario Autenticado\nSQL Query ",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "35f05efa-09b0-4ffd-a021-9c5126389ea4",
-            "labels": [
-              "Usuario Autenticado\nSQL Query "
-            ],
-            "source": {
-              "cell": "59872e56-ed3d-40ff-b012-35938c06cb8f"
-            },
-            "target": {
-              "cell": "a87cf3c7-5ff2-4af1-9548-e5723508505b"
-            },
-            "vertices": [
-              {
-                "x": 750,
-                "y": 330
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
                 "strokeDasharray": "4 3"
               }
             },
@@ -1559,6 +1463,134 @@
                 "y": 250
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Usuario Autenticado\nSQL Query ",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "08bb481d-0eca-4240-844b-f5827eabe6f3",
+                  "title": "Ataque Man in the middle",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Instrucciones de SQL enviadas hacia la base de datos.\n\nUn atacante podría interceptar las consultas de la base de datos en tránsito y obtener información confidencial, como credenciales de la base de datos, parámetros de consulta o resultados de la consulta (es poco probable ya que el flujo de datos se realiza a través de una red privada).",
+                  "mitigation": "Aplicar una conexión cifrada en el servidor de base de datos.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": "11"
+                }
+              ]
+            },
+            "id": "35f05efa-09b0-4ffd-a021-9c5126389ea4",
+            "labels": [
+              "Usuario Autenticado\nSQL Query "
+            ],
+            "source": {
+              "cell": "59872e56-ed3d-40ff-b012-35938c06cb8f"
+            },
+            "target": {
+              "cell": "a87cf3c7-5ff2-4af1-9548-e5723508505b"
+            },
+            "vertices": [
+              {
+                "x": 750,
+                "y": 330
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Usuario Autenticado\nSQL Query Resultado\n",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "40389277-d7f2-4b84-83df-ff7bf27a6f90",
+                  "title": "Ataque Man in the middle",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Instrucciones de SQL enviadas hacia la base de datos.\n\nUn atacante podría interceptar las consultas de la base de datos en tránsito y obtener información confidencial, como credenciales de la base de datos, parámetros de consulta o resultados de la consulta (es poco probable ya que el flujo de datos se realiza a través de una red privada).",
+                  "mitigation": "Aplicar una conexión cifrada en el servidor de base de datos.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": "11"
+                }
+              ]
+            },
+            "id": "b792444a-e6f2-4e32-99a6-e1d9b872d1e9",
+            "labels": [
+              "Usuario Autenticado\nSQL Query Resultado\n"
+            ],
+            "source": {
+              "cell": "a87cf3c7-5ff2-4af1-9548-e5723508505b"
+            },
+            "target": {
+              "cell": "59872e56-ed3d-40ff-b012-35938c06cb8f"
+            },
+            "vertices": [
+              {
+                "x": 960,
+                "y": 280
+              },
+              {
+                "x": 870,
+                "y": 240
+              }
+            ]
           }
         ],
         "description": "Diagrama de flujo de datos de inicio de sesión del usuario para el sitio web de la biblioteca universitaria "
@@ -1566,6 +1598,6 @@
     ],
     "diagramTop": 3,
     "reviewer": "Guillermo Vera",
-    "threatTop": 18
+    "threatTop": 20
   }
 }
